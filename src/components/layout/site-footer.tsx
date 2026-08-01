@@ -64,7 +64,7 @@ export function SiteFooter() {
               </p>
               <p className="flex items-center gap-2">
                 <MapPin size={17} className="text-gold" />
-                السويس - جوار كارفور
+                السويس - الغريب - الكورنيش القديم - امام منتجع الوتر واي
               </p>
             </div>
           </div>
