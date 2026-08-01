@@ -59,7 +59,7 @@ const drawerGroups: DrawerGroup[] = [
     title: "الدعم",
     links: [
       { href: "#faq", label: "الأسئلة الشائعة", icon: ShieldQuestion },
-      { href: "#terms", label: "الشروط والأحكام", icon: FileText },
+      { href: "/terms", label: "الشروط والأحكام", icon: FileText },
     ],
   },
 ];
@@ -187,7 +187,9 @@ export function MoreDrawer({ isOpen, onClose }: MoreDrawerProps) {
           <div className="space-y-5">
             {drawerGroups.map((group) => (
               <section key={group.title}>
-                <h3 className="mb-3 text-sm font-black text-gold">{group.title}</h3>
+                <h3 className="mb-3 text-sm font-black text-gold">
+                  {group.title}
+                </h3>
                 <div className="overflow-hidden rounded-[18px] border border-border bg-card">
                   {group.links.map((link, index) => {
                     const Icon = link.icon;
@@ -201,7 +203,11 @@ export function MoreDrawer({ isOpen, onClose }: MoreDrawerProps) {
                           isLast ? "" : "border-b border-border"
                         }`}
                       >
-                        <Icon className="text-gold" size={21} strokeWidth={1.8} />
+                        <Icon
+                          className="text-gold"
+                          size={21}
+                          strokeWidth={1.8}
+                        />
                         <span className="flex-1">{link.label}</span>
                         <ChevronLeft className="text-muted" size={18} />
                       </Link>

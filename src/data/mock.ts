@@ -14,6 +14,7 @@ import type {
   AppNotification,
   Booking,
   ClassLeval,
+  FaqItem,
   StudentProfile,
   Subject,
   Teacher,
@@ -285,6 +286,41 @@ export const classLeval: ClassLeval[] = [
   { id: "class_1", title: "الأول الثانوي" },
   { id: "class_2", title: "الثاني الثانوي" },
   { id: "class_3", title: "الثالث الثانوي" },
+];
+
+// Later data flow:
+// faqs table: id, question, answer, is_active, sort_order.
+export const faqs: FaqItem[] = [
+  {
+    id: "faq_1",
+    question: "كيف أقوم بحجز درس؟",
+    answer:
+      "من صفحة «احجز درس» اختر المادة والمدرس والموعد المناسب ثم أكّد الحجز، وسيتم مراجعة طلبك والتواصل معك لتأكيد الموعد.",
+  },
+  {
+    id: "faq_2",
+    question: "هل يمكنني تغيير موعد الحجز بعد تأكيده؟",
+    answer:
+      "نعم، تواصل مع إدارة السنتر لتعديل الموعد حسب توفر الجداول، وسيتم إشعارك بأي تغيير في الحجز.",
+  },
+  {
+    id: "faq_3",
+    question: "ما هي طرق الدفع المتاحة؟",
+    answer:
+      "يتم الدفع في مقر السنتر، مع إمكانية الاتفاق على خطة أقساط مناسبة للعام الدراسي.",
+  },
+  {
+    id: "faq_4",
+    question: "هل يوجد نظام متابعة لمستوى الطالب؟",
+    answer:
+      "نعم، يوجد نظام متابعة دورية مع مراجعات واختبارات دورية لقياس مستوى الطالب أولاً بأول.",
+  },
+  {
+    id: "faq_6",
+    question: "كيف أتواصل مع إدارة السنتر؟",
+    answer:
+      "من قسم «تواصل معنا» في الصفحة الرئيسية أو عبر أرقام الهواتف المعلنة في مقر السنتر.",
+  },
 ];
 
 // Later data flow:

@@ -43,6 +43,12 @@ export type Testimonial = {
   rating: number;
 };
 
+export type FaqItem = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
 export type StudentProfile = {
   id: string;
   name: string;
@@ -75,4 +81,17 @@ export type Booking = {
   schedule: string;
   date: string;
   status: BookingStatus;
+};
+
+export type TermsSection = {
+  id: string;
+  title: string;
+  paragraphs: string[];
+  list?: string[];
+};
+
+export type TermsContent = {
+  lastUpdated: string;
+  intro: string;
+  sections: TermsSection[];
 };

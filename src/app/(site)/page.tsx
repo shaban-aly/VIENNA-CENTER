@@ -1,4 +1,5 @@
 import { AnnouncementsSection } from "@/components/home/announcements-section";
+import { FaqSection } from "@/components/home/faq-section";
 import { FeaturesSection } from "@/components/home/features-section";
 import { Hero } from "@/components/home/hero";
 import { SubjectsSection } from "@/components/home/subjects-section";
@@ -17,6 +18,7 @@ export default function Home() {
         <TeachersPreviewSection />
         <FeaturesSection />
         <TestimonialsSection />
+        <FaqSection />
         <ContactUs />
       </div>
     </>

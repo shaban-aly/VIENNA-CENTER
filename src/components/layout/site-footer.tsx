@@ -6,6 +6,7 @@ const footerLinks = [
   { href: "/subjects", label: "المواد" },
   { href: "/teachers", label: "المدرسون" },
   { href: "/booking", label: "الحجز" },
+  { href: "/terms", label: "الشروط والأحكام" },
   { href: "/#contact", label: "تواصل معنا" },
 ];
 
