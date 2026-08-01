@@ -83,6 +83,19 @@ export type Booking = {
   status: BookingStatus;
 };
 
+export type AdminBooking = {
+  id: string;
+  studentName: string;
+  phone: string;
+  grade: string;
+  subject: string;
+  teacherName: string;
+  schedule: string;
+  date: string;
+  status: BookingStatus;
+  createdAt: string;
+};
+
 export type TermsSection = {
   id: string;
   title: string;

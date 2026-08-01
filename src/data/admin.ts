@@ -1,0 +1,116 @@
+import type { AdminBooking } from "@/types/content";
+
+// Mock admin session used until Supabase Auth roles are connected.
+export const mockAdmin = {
+  id: "admin_1",
+  name: "إدارة سنتر فيينا",
+  email: "admin@vienna.center",
+};
+
+// Later data flow:
+// users table (role = admin) -> admin session.
+// bookings table -> admin bookings view with student name, phone, grade.
+export const adminBookings: AdminBooking[] = [
+  {
+    id: "b_1001",
+    studentName: "أحمد سامي",
+    phone: "01012345678",
+    grade: "الثالث الثانوي",
+    subject: "الرياضيات",
+    teacherName: "أ / محمد يونس",
+    schedule: "السبت 6:00 مساء",
+    date: "3 أغسطس 2026",
+    status: "pending",
+    createdAt: "1 أغسطس 2026",
+  },
+  {
+    id: "b_1002",
+    studentName: "مريم خالد",
+    phone: "01198765432",
+    grade: "الثاني الثانوي",
+    subject: "الفيزياء",
+    teacherName: "أ / شريف خالد",
+    schedule: "الأربعاء 6:00 مساء",
+    date: "6 أغسطس 2026",
+    status: "pending",
+    createdAt: "1 أغسطس 2026",
+  },
+  {
+    id: "b_1003",
+    studentName: "يوسف عادل",
+    phone: "01234567890",
+    grade: "الأول الثانوي",
+    subject: "الكيمياء",
+    teacherName: "أ / أحمد الصحراوي",
+    schedule: "الثلاثاء 6:30 مساء",
+    date: "4 أغسطس 2026",
+    status: "confirmed",
+    createdAt: "31 يوليو 2026",
+  },
+  {
+    id: "b_1004",
+    studentName: "سارة محمد",
+    phone: "01567890123",
+    grade: "الثالث الثانوي",
+    subject: "الأحياء",
+    teacherName: "أ / دينا فتحي",
+    schedule: "الاثنين 5:30 مساء",
+    date: "3 أغسطس 2026",
+    status: "pending",
+    createdAt: "31 يوليو 2026",
+  },
+  {
+    id: "b_1005",
+    studentName: "عمر هشام",
+    phone: "01098765432",
+    grade: "الثاني الثانوي",
+    subject: "اللغة العربية",
+    teacherName: "أ / هالة نبيل",
+    schedule: "الخميس 7:00 مساء",
+    date: "6 أغسطس 2026",
+    status: "cancelled",
+    createdAt: "30 يوليو 2026",
+  },
+  {
+    id: "b_1006",
+    studentName: "فاطمة الزهراء",
+    phone: "01123456789",
+    grade: "الثالث الثانوي",
+    subject: "English",
+    teacherName: "أ / أحمد الصحراوي",
+    schedule: "الثلاثاء 5:00 مساء",
+    date: "5 أغسطس 2026",
+    status: "confirmed",
+    createdAt: "30 يوليو 2026",
+  },
+  {
+    id: "b_1007",
+    studentName: "زياد ناصر",
+    phone: "01278901234",
+    grade: "الأول الثانوي",
+    subject: "الرياضيات",
+    teacherName: "أ / محمد يونس",
+    schedule: "السبت 6:00 مساء",
+    date: "8 أغسطس 2026",
+    status: "pending",
+    createdAt: "29 يوليو 2026",
+  },
+  {
+    id: "b_1008",
+    studentName: "ملك أحمد",
+    phone: "01523456789",
+    grade: "الثاني الثانوي",
+    subject: "الفيزياء",
+    teacherName: "أ / شريف خالد",
+    schedule: "الأربعاء 6:00 مساء",
+    date: "12 أغسطس 2026",
+    status: "cancelled",
+    createdAt: "28 يوليو 2026",
+  },
+];
+
+export const adminStats = {
+  studentsCount: 214,
+  teachersCount: 5,
+  subjectsCount: 6,
+};
