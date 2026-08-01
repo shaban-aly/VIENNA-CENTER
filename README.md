@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vienna Center
+
+نظام إدارة سنتر تعليمي — واجهة عربية داكنة (RTL) بنظام حجز للمواد والمدرسين، مصمم لأدوار: **طالب** و**أدمن**.
+
+Dark, Arabic-first (RTL) web app for an educational center — subject/teacher browsing and lesson booking with a student & admin experience.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) (App Router) 16
+- TypeScript
+- Tailwind CSS v4
+- Lucide icons
+- Supabase (Auth + Database + Storage) — planned
+- Firebase Cloud Messaging — planned later
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> On Windows PowerShell, use `npm.cmd` if `npm` is blocked.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm run start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```txt
+src/
+  app/          # Routes (public site + app + auth)
+  components/   # ui (generic), layout (shell/nav), page-specific sections
+  hooks/        # Page-scoped client logic + shared hooks (debounce, search)
+  lib/          # Helpers and external clients
+  data/         # Mock data (until Supabase is connected)
+  types/        # Shared TypeScript types
+docs/           # Project plan, design system, and reference images
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Status
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The UI runs on mock data in `src/data/mock.ts`. Backend (Supabase) integration, student auth, and the admin dashboard are planned next. See `docs/PROJECT_PLAN.md` and `docs/DESIGN_SYSTEM.md`.
