@@ -1,13 +1,19 @@
 "use client";
 
-import { MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { MapPin, MessageCircle, Phone, Send, Share2 } from "lucide-react";
 import { Button, SectionHeader } from "@/components/ui";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TikTokIcon,
+  YouTubeIcon,
+} from "@/components/ui/social-icons";
 import { useContactForm } from "@/hooks/home/use-contact-form";
 
 const contactCards = [
   {
     title: "راسلنا على واتساب",
-    value: "012 345 678 90",
+    value: "010 110 156 04",
     hint: "اضغط للتواصل معنا مباشرة",
     href: "https://wa.me/201011015604?text=مرحباً، أرغب في الاستفسار عن سنتر فيينا التعليمي.",
     icon: MessageCircle,
@@ -25,12 +31,35 @@ const contactCards = [
   },
   {
     title: "اتصل بنا",
-    value: "012 345 678 90",
+    value: "010 110 156 04",
     hint: "متاح من 4 م إلى 9 م يوميا",
     href: "tel:01011015604",
     icon: Phone,
     accent: "text-gold",
     box: "border-gold/25 bg-gold/10",
+  },
+];
+
+const socialLinks = [
+  {
+    label: "فيسبوك",
+    href: "https://www.facebook.com/centervienna",
+    Icon: FacebookIcon,
+  },
+  {
+    label: "انستجرام",
+    href: "https://www.instagram.com/centervienna",
+    Icon: InstagramIcon,
+  },
+  {
+    label: "تيك توك",
+    href: "https://www.tiktok.com/@centervienna",
+    Icon: TikTokIcon,
+  },
+  {
+    label: "يوتيوب",
+    href: "https://www.youtube.com/@centervienna",
+    Icon: YouTubeIcon,
   },
 ];
 
@@ -43,7 +72,7 @@ export function ContactUs() {
       <SectionHeader title="تواصل معنا" />
 
       <div className="grid gap-3 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-1">
+        <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-1">
           {contactCards.map((card) => {
             const Icon = card.icon;
 
@@ -79,6 +108,35 @@ export function ContactUs() {
               </a>
             );
           })}
+
+          <div className="flex min-h-24 flex-col justify-center gap-3 rounded-[18px] border border-border bg-card p-4 transition hover:border-gold/50">
+            <div className="flex items-center gap-4">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl border border-gold/25 bg-gold/10">
+                <Share2 className="text-gold" size={25} strokeWidth={1.8} />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-black text-white">تابعنا على السوشيال ميديا</p>
+                <p className="mt-1 text-xs text-muted/80">
+                  فيس بوك، انستجرام، تيك توك، يوتيوب
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 ps-16">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  title={label}
+                  className="flex size-11 items-center justify-center rounded-xl border border-gold/25 bg-gold/10 text-gold transition hover:scale-105 hover:bg-gold/20"
+                >
+                  <Icon size={19} />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="rounded-[22px] border border-border bg-card p-5">

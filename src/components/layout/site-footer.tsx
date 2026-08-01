@@ -54,18 +54,31 @@ export function SiteFooter() {
           <div>
             <h3 className="text-sm font-black text-gold">بيانات التواصل</h3>
             <div className="mt-3 space-y-2 text-sm font-bold text-muted">
-              <p className="flex items-center gap-2">
-                <Phone size={17} className="text-gold" />
-                +201011015604
-              </p>
-              <p className="flex items-center gap-2">
-                <MessageCircle size={17} className="text-gold" />
+              <a
+                href="tel:+201011015604"
+                className="flex min-h-10 items-center gap-2 rounded-xl px-2 transition hover:bg-card hover:text-white"
+              >
+                <Phone size={17} className="shrink-0 text-gold" />
+                <span dir="ltr">+2010 110 156 04</span>
+              </a>
+              <a
+                href="https://wa.me/201011015604?text=مرحباً، أرغب في الاستفسار عن سنتر فيينا التعليمي."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-10 items-center gap-2 rounded-xl px-2 transition hover:bg-card hover:text-white"
+              >
+                <MessageCircle size={17} className="shrink-0 text-gold" />
                 واتساب مباشر للحجز والاستفسار
-              </p>
-              <p className="flex items-center gap-2">
-                <MapPin size={17} className="text-gold" />
+              </a>
+              <a
+                href="https://maps.app.goo.gl/g7wtX8xgY74veGqY8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-10 items-center gap-2 rounded-xl px-2 transition hover:bg-card hover:text-white"
+              >
+                <MapPin size={17} className="shrink-0 text-gold" />
                 السويس - الغريب - الكورنيش القديم - امام منتجع الوتر واي
-              </p>
+              </a>
             </div>
           </div>
         </div>
