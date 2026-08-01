@@ -2,6 +2,7 @@ import { Suspense, type ReactNode } from "react";
 import { BottomNavigation } from "./bottom-navigation";
 import { SiteFooter } from "./site-footer";
 import { TopNavigation } from "./top-navigation";
+import { WhatsAppButton } from "./whatsapp-button";
 
 type AppShellProps = {
   children: ReactNode;
@@ -13,6 +14,7 @@ export function AppShell({ children }: AppShellProps) {
       <TopNavigation />
       <main className="flex-1 pt-12 pb-24 lg:pt-16 lg:pb-0">{children}</main>
       <SiteFooter />
+      <WhatsAppButton />
       <Suspense fallback={null}>
         <BottomNavigation />
       </Suspense>

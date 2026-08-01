@@ -56,7 +56,7 @@ export function SiteFooter() {
             <div className="mt-3 space-y-2 text-sm font-bold text-muted">
               <p className="flex items-center gap-2">
                 <Phone size={17} className="text-gold" />
-                012 345 678 90
+                +201011015604
               </p>
               <p className="flex items-center gap-2">
                 <MessageCircle size={17} className="text-gold" />

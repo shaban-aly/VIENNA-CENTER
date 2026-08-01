@@ -10,6 +10,7 @@ export function Hero() {
         src="/images/background-mobile.png"
         alt="مبنى سنتر فيينا التعليمي"
         fill
+        sizes="100vw"
         priority
         className="object-cover object-[center_48%] md:object-[center_52%] lg:hidden"
       />
@@ -17,6 +18,7 @@ export function Hero() {
         src="/images/background-desktop.png"
         alt="مبنى سنتر فيينا التعليمي"
         fill
+        sizes="100vw"
         priority
         className="hidden object-cover object-center lg:block"
       />
